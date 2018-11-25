@@ -1,0 +1,8 @@
+GMIC:
+Patch size = 15
+Lookup size = 10
+Lookup factor = 1
+Blend size = 1.12
+Blend threshold = 0
+Blend decay = .05
+Blend scales = 10
