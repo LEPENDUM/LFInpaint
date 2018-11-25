@@ -31,7 +31,7 @@ Directory for input data. A Light Field example is given.
 
 - readHCI_LF.m
 
-Load light field data from png files as well as mask and segmentation data.
+Load light field data from png files as well as inpainting mask, segmentation data and inpainted central view.
 
 - RandomHomography.m
 
