@@ -219,7 +219,13 @@ for u=uRange
         end
         
         %Conversion steps
-        TmpMask = TmpMask(:,:,1)==objLblColor(1) & TmpMask(:,:,2)==objLblColor(2) & TmpMask(:,:,3)==objLblColor(3);
+        if(size(TmpMask,3)==1)
+            TmpMask = TmpMask==objLblColor(1);
+        elseif(size(TmpMask,3)==3)
+            TmpMask = TmpMask(:,:,1)==objLblColor(1) & TmpMask(:,:,2)==objLblColor(2) & TmpMask(:,:,3)==objLblColor(3);
+        else
+            error('The mask should have either 1 or 3 channel dimensions');
+        end
         
         if(dilateMask>0)
             TmpMask = enlarge_GTmask(TmpMask,dilateMask);
